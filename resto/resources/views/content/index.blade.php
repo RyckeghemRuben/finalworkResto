@@ -5,7 +5,7 @@
 
     <div class="row" style="margin-top: 1.5em">
         <div class="col-4" style="padding: 0 0 0 2em;">
-            <a href="{{Route('content.dranken')}}"><img src="{{ URL::asset("/images/drinks.png") }}" style="width: 100%;"></a>
+            <a class="bottomBtn" href="{{Route('content.dranken')}}"><img src="{{ URL::asset("/images/drinks.png") }}" style="width: 100%;"></a>
         </div>
         <div class="col-4">
             <img style="width: 100%;" src="{{ URL::asset("/images/food.png") }}">
