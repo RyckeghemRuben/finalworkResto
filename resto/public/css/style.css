@@ -1,4 +1,15 @@
+@font-face {
+    font-family: Steelfish;
+    src: url('/fonts/steelfish/steelfish.tff');
+}
+
+
+
 .startbody{
     background-image: url("/images/bg.png");
     background-size: cover;
+}
+
+.test{
+    font-family: Steelfish;
 }

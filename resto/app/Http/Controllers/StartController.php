@@ -13,6 +13,12 @@ class StartController extends Controller
         return view('admin.index');
     }
 
+
+    public function getDranken()
+    {
+        return view('content.dranken');
+    }
+
     public function getAddStorage(Request $request){
 
         $this->validate($request,[
@@ -29,5 +35,5 @@ class StartController extends Controller
         return view('content.index');
     }
 
-//test
+
 }

@@ -29,7 +29,7 @@
         <div class="col">
             <div class="collapse multi-collapse" id="multiCollapseExample1">
                 <div class="card card-body" style="text-align: center">
-                    <form method="post" action="{{route('addTostorage')}}">
+                    <form method="post" action="{{route('addTostorage')}}" class="test">
                         @csrf
                         <div class="form-group">
                             <label for="tafelNummer">Tafelnummer:</label>

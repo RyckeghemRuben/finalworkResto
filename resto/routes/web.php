@@ -21,6 +21,9 @@ Route::get('/index','StartController@getIndex')->name('content.index');
 
 Route::get('/admin','StartController@getAdmin')->name('admin.index');
 
+Route::get('/dranken','StartController@getDranken')->name('content.dranken');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
