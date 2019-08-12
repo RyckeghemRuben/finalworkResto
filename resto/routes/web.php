@@ -36,3 +36,7 @@ Route::post('/index',[
     'uses' => 'StartController@getAddStorage',
     'as' => 'addTostorage'
 ]);
+
+Route::get('/adminDranken','AdminController@getAdminDranken')->name('admin.adminDranken');
+
+Route::get('/createDrank','AdminController@getDrankenCreate')->name('admin.createDrank');
