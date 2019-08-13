@@ -17,6 +17,7 @@ Route::get('/', function (){
 });
 
 
+
 Route::get('/index','StartController@getIndex')->name('content.index');
 
 Route::get('/admin','StartController@getAdmin')->name('admin.index');
@@ -69,3 +70,8 @@ Route::get('drankDelete/{id}',[
     'uses' => 'AdminController@getDrankDelete',
     'as' => 'drankDelete'
     ]);
+
+Route::get('/start',[
+    'uses' => 'StartController@getStart',
+    'as' => 'contentStart'
+]);

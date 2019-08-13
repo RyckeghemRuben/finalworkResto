@@ -8,6 +8,11 @@ use Session;
 class StartController extends Controller
 {
 
+    public function getStart()
+    {
+        return view('content.start');
+    }
+
     public function getAdmin()
     {
         return view('admin.index');

@@ -35,7 +35,7 @@
                             <label for="tafelNummer">Tafelnummer:</label>
                             <input type="text" class="form-control" name="tafelNummer" placeholder="Enter tafelnummer">
                         </div>
-                        <input type="submit" class="btn btn-outline-danger"></a>
+                        <input type="submit" class="btn btn-outline-danger">
                     </form>
                 </div>
             </div>

@@ -11,7 +11,7 @@
     <title>Resto</title>
 </head>
 <body>
-<div class="container">
+<div class="container" style="margin-bottom: 2em;">
 @include('partials.header')
 @yield('content')
 </div>

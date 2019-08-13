@@ -21,6 +21,9 @@
         <div class="col-4">
             <img style="width: 100%;" src="{{ URL::asset("/images/bill.png") }}">
         </div>
+        <div class="col-4" style="padding-left: 0; padding-right: 2em;">
+           <a href="{{Route('contentStart')}}"><img style="width: 100%;" src="{{ URL::asset("/images/logOut.png") }}"></a>
+        </div>
     </div>
     {{print_r(session()->get('tafelNummer'), true)}}
 @endsection
