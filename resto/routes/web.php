@@ -64,3 +64,8 @@ Route::post('/drankUpdate',[
     'uses' => 'DrankController@postUpdateDrank',
     'as' => 'drankUpdate'
 ]);
+
+Route::get('drankDelete/{id}',[
+    'uses' => 'AdminController@getDrankDelete',
+    'as' => 'drankDelete'
+    ]);

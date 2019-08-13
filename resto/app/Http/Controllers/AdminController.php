@@ -28,5 +28,12 @@ class AdminController extends Controller
             'soorts' => $soorts
         ]);
     }
+    public function getDrankDelete($id){
+        $drankje = Drank::find($id);
+        $drankje->soorts()->delete();
+        $drankje->delete();
+
+        return redirect()->action('DrankController@getDrankIndex');
+    }
 
 }
