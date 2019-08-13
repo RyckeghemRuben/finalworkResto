@@ -46,8 +46,7 @@
                 Abdijbier
             </label>
         </div>
-
-
+        @csrf
         <button style="margin-top: 1em;" type="submit" class="btn btn-outline-danger">Submit</button>
 
     </form>
