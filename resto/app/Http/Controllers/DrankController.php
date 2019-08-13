@@ -15,7 +15,7 @@ class DrankController extends Controller
         $drankNaam = $request->input('search');
         $gezochteDrank = Drank::select('drankNaam')
             ->where('drankNaam','LIKE', '%'.$drankNaam.'%')
-            ->first();
+            ->get();
 
         return view('admin.adminDranken',['drankjes' => $drankjes,'gezochteDrank'=> $gezochteDrank]);
     }

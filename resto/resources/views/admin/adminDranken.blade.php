@@ -7,9 +7,9 @@
     <form>
         <input type="text" name="search" id="search" class="form-control" placeholder="search">
     </form>
-
-        {{$gezochteDrank->drankNaam}}
-
+        @foreach($gezochteDrank as $gezocht)
+        <h5>{{$gezocht->drankNaam}}</h5>
+        @endforeach
     <div class="container">
     @foreach($drankjes as $drankje)
         <div class="row" style="margin-top: 1em;">
