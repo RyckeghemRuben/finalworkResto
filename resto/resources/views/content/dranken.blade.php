@@ -1,6 +1,10 @@
 @extends('layouts.menu')
 
 @section('content')
+
+
+
+
     <div class="row">
         <nav class="navbar fixed-bottom navbar-light bg-light">
             <div class="col">

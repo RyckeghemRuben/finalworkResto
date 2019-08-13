@@ -9,12 +9,12 @@
         </div>
         <div class="card-body">
             <h5 class="card-title bg">Creëer/update/verwijder dranken</h5>
-            <a href="{{route('admin.adminDranken')}}" class="btn btn-outline-danger">Volgende</a>
+            <a href="{{route('drankje')}}" class="btn btn-outline-danger">Volgende</a>
         </div>
     </div>
     <div class="card" style="margin-top: 1.5em">
         <div class="card-header bg-danger" style="color: white;">
-            Dranken
+            Gerechten
         </div>
         <div class="card-body">
             <h5 class="card-title bg">Creëer/update/verwijder gerechten</h5>
@@ -23,7 +23,7 @@
     </div>
     <div class="card" style="margin-top: 1.5em">
         <div class="card-header bg-danger" style="color: white;">
-            Dranken
+            Andere
         </div>
         <div class="card-body">
             <h5 class="card-title bg">Creëer/update/verwijder andere</h5>

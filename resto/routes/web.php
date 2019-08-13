@@ -40,3 +40,13 @@ Route::post('/index',[
 Route::get('/adminDranken','AdminController@getAdminDranken')->name('admin.adminDranken');
 
 Route::get('/createDrank','AdminController@getDrankenCreate')->name('admin.createDrank');
+
+Route::get('/drankje',[
+    'uses' => 'DrankController@getDrankIndex',
+    'as' => 'drankje'
+]);
+
+Route::post('/createDrank',[
+    'uses' => 'DrankController@postCreateDrank',
+    'as' => 'drankCreate'
+]);
