@@ -30,7 +30,7 @@ class AdminController extends Controller
     }
     public function getDrankDelete($id){
         $drankje = Drank::find($id);
-        $drankje->soorts()->delete();
+        $drankje->soorts()->detach();
         $drankje->delete();
 
         return redirect()->action('DrankController@getDrankIndex');

@@ -5,19 +5,26 @@ use App\Drank;
 use App\Soort;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DrankController extends Controller
 {
-    public function getDrankIndex(){
-        $drankjes = Drank::orderBy('created_at','asc')->paginate(5);
-        return view('admin.adminDranken',['drankjes' => $drankjes]);
+    public function getDrankIndex(Request $request){
+        $drankjes = Drank::orderBy('drankNaam')->paginate(5);
+
+        $drankNaam = $request->input('search');
+        $gezochteDrank = Drank::select('drankNaam')
+            ->where('drankNaam','LIKE', '%'.$drankNaam.'%')
+            ->first();
+
+        return view('admin.adminDranken',['drankjes' => $drankjes,'gezochteDrank'=> $gezochteDrank]);
     }
 
     public function postCreateDrank(Request $request){
 
         $this->validate($request,[
             'drankNaam' => 'required',
-            'drankPrijs' => 'required'
+            'drankPrijs' => 'required|numeric'
         ]);
 
         $drankje = new Drank([
@@ -38,7 +45,7 @@ class DrankController extends Controller
     public function postUpdateDrank(Request $request){
         $this->validate($request,[
             'drankNaam' => 'required',
-            'drankPrijs' => 'required'
+            'drankPrijs' => 'required|numeric'
         ]);
 
         //haal aan te passen item op uit database
@@ -56,6 +63,15 @@ class DrankController extends Controller
             $request->input('soorts')===null ? '' : $request->input('soorts'));
 
         return redirect()->route('drankje');
+    }
+
+    function search(Request $request){
+        $drankNaam = $request->input('search');
+        $gezochteDrank = DB::table('dranks')
+            ->select(DB::raw("*"))
+            ->where('drankNaam','=', $drankNaam)
+            ->get();
+        return view('admin.adminDranken',['gezochteDrank'=>$gezochteDrank]);
     }
 
 }
