@@ -53,3 +53,14 @@ Route::post('/createDrank',[
     'uses' => 'DrankController@postCreateDrank',
     'as' => 'drankCreate'
 ]);
+
+
+Route::get('drankEdit/{id}',[
+    'uses' => 'AdminController@getDrankenEdit',
+    'as' => 'editDrankPagina'
+]);
+
+Route::post('/drankUpdate',[
+    'uses' => 'DrankController@postUpdateDrank',
+    'as' => 'drankUpdate'
+]);

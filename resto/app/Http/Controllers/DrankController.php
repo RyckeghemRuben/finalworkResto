@@ -35,4 +35,27 @@ class DrankController extends Controller
         return redirect()->route('drankje');
     }
 
+    public function postUpdateDrank(Request $request){
+        $this->validate($request,[
+            'drankNaam' => 'required',
+            'drankPrijs' => 'required'
+        ]);
+
+        //haal aan te passen item op uit database
+        $drankje = Drank::find($request->input('id'));
+
+        //pas waarden aan
+        $drankje->drankNaam =$request->input('drankNaam');
+        $drankje->drankPrijs=$request->input('drankPrijs');
+
+        $drankje->save();
+
+
+        //tags opslaan
+        $drankje->soorts()->sync(
+            $request->input('soorts')===null ? '' : $request->input('soorts'));
+
+        return redirect()->route('drankje');
+    }
+
 }

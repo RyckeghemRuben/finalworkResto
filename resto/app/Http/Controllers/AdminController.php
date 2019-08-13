@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Drank;
 use Illuminate\Http\Request;
 use App\Soort;
 
@@ -16,4 +17,16 @@ class AdminController extends Controller
         $soorts = Soort::all();
         return view('admin.createDrank',['soorts'=>$soorts]);
     }
+
+    function getDrankenEdit($id){
+        $drankje = Drank::find($id);
+        $soorts = Soort::all();
+
+        return view('admin.editDrank',[
+            'drankje' => $drankje,
+            'drankId'=>$id,
+            'soorts' => $soorts
+        ]);
+    }
+
 }
