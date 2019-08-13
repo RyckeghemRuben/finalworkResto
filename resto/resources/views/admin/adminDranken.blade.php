@@ -8,4 +8,5 @@
             <h4 class="col-8" style="font-family: Steelfish">{{$drankje->drankNaam}}</h4>
         </div>
     @endforeach
+    {{$drankjes->links()}}
 @endsection

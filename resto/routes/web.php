@@ -39,7 +39,10 @@ Route::post('/index',[
 
 Route::get('/adminDranken','AdminController@getAdminDranken')->name('admin.adminDranken');
 
-Route::get('/createDrank','AdminController@getDrankenCreate')->name('admin.createDrank');
+Route::get('/createDrank',[
+    'uses' => 'AdminController@getDrankenCreate',
+    'as' =>'admin.createDrank'
+]);
 
 Route::get('/drankje',[
     'uses' => 'DrankController@getDrankIndex',

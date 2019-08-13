@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Soort;
+
 
 class AdminController extends Controller
 {
@@ -10,6 +13,7 @@ class AdminController extends Controller
         return view('admin.adminDranken');
     }
     function getDrankenCreate(){
-        return view('admin.createDrank');
+        $soorts = Soort::all();
+        return view('admin.createDrank',['soorts'=>$soorts]);
     }
 }

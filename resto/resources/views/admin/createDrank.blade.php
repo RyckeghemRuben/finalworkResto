@@ -11,6 +11,19 @@
                 <label for="content">Prijs</label>
                 <input type="text" class="form-control" id="drankPrijs" name="drankPrijs">
             </div>
+            @foreach($soorts as $soort)
+
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="soorts[]"
+                               value="{{$soort->id}}">
+                        {{$soort->name}}
+                    </label>
+                </div>
+
+            @endforeach
+
+
             @csrf
             <button type="submit" class="btn btn-danger">Submit</button>
         </form>
