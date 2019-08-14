@@ -13,7 +13,7 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em; text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach

@@ -80,3 +80,8 @@ Route::get('/start',[
     'uses' => 'StartController@getStart',
     'as' => 'contentStart'
 ]);
+
+Route::get('/addToCart/{id}',[
+    'uses'=>'ProductController@getAddToCart',
+    'as'=>'product.addToCart'
+]);

@@ -42,6 +42,7 @@ class StartController extends Controller
     public function getIndex(){
         return view('content.index');
     }
+
     public function getDrankIndexKlant(){
         $frisdranken = Soort::with('dranks')
         ->where('id','=',1)->get();
@@ -70,16 +71,10 @@ class StartController extends Controller
         $wijnen = Soort::with('dranks')
             ->where('id','=',9)->get();
 
-
-
-
         return view('content.dranken',['frisdranken'=>$frisdranken,'bierenVat'=>$bierenVat,
             'bierenFles'=>$bierenFles, 'trappisten'=>$trappisten, 'abdijBieren'=>$abdijBieren,
             'fruitBieren'=>$fruitBieren, 'apperitieven'=>$apperitieven, 'sterkeDranken'=>$sterkeDranken,
             'wijnen'=>$wijnen]);
-
-
-
     }
 
 }
