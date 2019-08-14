@@ -5,8 +5,10 @@
     <div class="row" style="margin-top: 1em">
         <div class="col-10"></div>
         <div class="col-2" style="text-align: center">
+            <a href="{{route('product.bestelling')}}">
             <img style="width: 100%;" src="{{ URL::asset("/images/cart.png") }}">
             <span class="badge-danger" style="padding: 0.2em">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+            </a>
         </div>
     </div>
     <h2 style="font-family: Steelfish;">Frisdranken</h2>

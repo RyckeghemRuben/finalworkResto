@@ -19,4 +19,14 @@ class ProductController extends Controller
         $request->session()->put('cart',$cart);
         return redirect()->route('drankIndexKlant');
     }
+
+    public function getBestelling(){
+        /* if(!Session::has('cart')){
+            return view('content.bestelling',['products'=>null]);
+        }*/
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        return view('content.bestelling',['products'=>$cart->items,'totalPrice'=>$cart->totalPrice]);
+
+    }
 }
