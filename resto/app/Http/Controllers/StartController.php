@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Soort;
+use function foo\func;
 use Illuminate\Http\Request;
 use Session;
+use App\Drank;
 
 class StartController extends Controller
 {
@@ -39,6 +42,17 @@ class StartController extends Controller
     public function getIndex(){
         return view('content.index');
     }
+    public function getDrankIndexKlant(){
+        $frisdranken = Soort::with('dranks')
+        ->where('id','=',1)->get();
 
+        $bierenVat = Soort::with('dranks')
+            ->where('id','=',2)->get();
+        return view('content.dranken',['frisdranken'=>$frisdranken,'bierenVat'=>$bierenVat]);
+    }
 
 }
+
+
+
+

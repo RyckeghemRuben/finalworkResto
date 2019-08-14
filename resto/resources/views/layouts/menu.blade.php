@@ -11,8 +11,8 @@
     <title>Resto</title>
 </head>
 <body>
-<div class="container">
-    @include('partials.menu-header')
+<div class="container" style="margin-bottom: 1.5em">
+    @include('partials.admin-header')
     @yield('content')
 </div>
 <!-- Optional JavaScript -->

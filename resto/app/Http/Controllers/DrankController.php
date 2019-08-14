@@ -10,14 +10,11 @@ use Illuminate\Support\Facades\DB;
 class DrankController extends Controller
 {
     public function getDrankIndex(Request $request){
-        $drankjes = Drank::orderBy('drankNaam')->paginate(5);
-
         $drankNaam = $request->input('search');
-        $gezochteDrank = Drank::select('drankNaam')
+        $gezochteDrank = Drank::orderBy('drankNaam','asc')
             ->where('drankNaam','LIKE', '%'.$drankNaam.'%')
             ->get();
-
-        return view('admin.adminDranken',['drankjes' => $drankjes,'gezochteDrank'=> $gezochteDrank]);
+        return view('admin.adminDranken',['gezochteDrank'=> $gezochteDrank]);
     }
 
     public function postCreateDrank(Request $request){
@@ -63,15 +60,6 @@ class DrankController extends Controller
             $request->input('soorts')===null ? '' : $request->input('soorts'));
 
         return redirect()->route('drankje');
-    }
-
-    function search(Request $request){
-        $drankNaam = $request->input('search');
-        $gezochteDrank = DB::table('dranks')
-            ->select(DB::raw("*"))
-            ->where('drankNaam','=', $drankNaam)
-            ->get();
-        return view('admin.adminDranken',['gezochteDrank'=>$gezochteDrank]);
     }
 
 }
