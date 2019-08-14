@@ -29,11 +29,17 @@
             </div>
             <hr>
             <div class="col-lg-12">
-                <button class="btn btn-outline-danger">Bestellen</button>
+                <a class="btn btn-danger" style="color: white">Bestellen</a>
             </div>
         </div>
     @else
-    <b>Nog geen bestelling gemaakt</b>
+    <div class="row" style="margin-top: 1em">
+        <div class="col-lg-12">
+            <div class="card" style="text-align: center">
+                <h1 style="font-family: Steelfish">Nog geen bestellingen</h1>
+            </div>
+        </div>
+    </div>
     @endif
 
 @endsection

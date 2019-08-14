@@ -11,6 +11,7 @@
 </head>
 <body class="startbody">
 <div class="container">
+    @include('partials.errors')
     <div class="row" style="margin: 2em 0 0 0">
         <div class="col-lg-12">
         <form>

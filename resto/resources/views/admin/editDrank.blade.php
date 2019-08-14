@@ -2,7 +2,8 @@
 
 @section('content')
     <div class="container">
-        <form method="post" action="{{route('drankUpdate')}}">
+        @include('partials.errors')
+        <form method="post" action="{{route('drankUpdate')}}" style="margin-top: 1em;">
             <div class="form-group">
                 <label for = "title">Naam drank</label>
                 <input type="text" class="form-control" id="drankNaam" name="drankNaam" value="{{$drankje->drankNaam}}">
