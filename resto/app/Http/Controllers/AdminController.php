@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Drank;
 use Illuminate\Http\Request;
 use App\Soort;
+use App\Bestelling;
 
 
 class AdminController extends Controller
@@ -36,4 +37,9 @@ class AdminController extends Controller
         return redirect()->action('DrankController@getDrankIndex');
     }
 
+    public function getKlantBestelling(){
+        $bestellingen = Bestelling::all();
+
+        return view('admin.adminBestellingen');
+    }
 }

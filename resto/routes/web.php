@@ -95,3 +95,7 @@ Route::get('/besteld',[
     'uses' => 'ProductController@getMaakBestelling',
     'as' => 'maakBestelling'
 ]);
+Route::get('/klantenBestellingen',[
+    'uses'=>'AdminController@getKlantBestelling',
+    'as'=>'admin.klantBestelling'
+]);

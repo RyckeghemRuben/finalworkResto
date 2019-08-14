@@ -2,7 +2,15 @@
 @extends('layouts.adminmenu')
 
 @section('content')
-
+    <div class="card" style="margin-top: 1.5em">
+        <div class="card-header bg-danger" style="color: white;">
+            Bestellingen
+        </div>
+        <div class="card-body">
+            <h5 class="card-title bg">Bestellingen van de klanten komen op de volgende pagina</h5>
+            <a href="{{route('admin.klantBestelling')}}" class="btn btn-outline-danger">Volgende</a>
+        </div>
+    </div>
     <div class="card" style="margin-top: 1.5em">
         <div class="card-header bg-danger" style="color: white;">
             Dranken
