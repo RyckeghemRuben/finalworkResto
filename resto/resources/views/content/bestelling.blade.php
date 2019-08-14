@@ -29,7 +29,7 @@
             </div>
             <hr>
             <div class="col-lg-12">
-                <a class="btn btn-danger" style="color: white">Bestellen</a>
+                <a href="{{route('maakBestelling')}}" class="btn btn-danger" style="color: white">Bestellen</a>
             </div>
         </div>
     @else

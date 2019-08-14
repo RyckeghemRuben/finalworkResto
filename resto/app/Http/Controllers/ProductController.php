@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Drank;
 use App\Cart;
+use App\Bestelling;
 use Session;
 
 
@@ -24,5 +25,18 @@ class ProductController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         return view('content.bestelling',['products'=>$cart->items,'totalPrice'=>$cart->totalPrice]);
+    }
+
+    public function getMaakBestelling(){
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+
+        $bestelling = new Bestelling();
+        $bestelling->cart = serialize($cart);
+        $bestelling->tafelnummer = Session::get('tafelNummer');
+
+        $bestelling->save();
+        Session::forget('cart');
+        return redirect()->route('content.index')->with('message', 'Bestelling gemaakt!');
     }
 }

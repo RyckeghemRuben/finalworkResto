@@ -90,3 +90,8 @@ Route::get('/bestelling',[
     'uses'=>'ProductController@getBestelling',
     'as'=>'product.bestelling'
 ]);
+
+Route::get('/besteld',[
+    'uses' => 'ProductController@getMaakBestelling',
+    'as' => 'maakBestelling'
+]);

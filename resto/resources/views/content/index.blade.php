@@ -2,7 +2,11 @@
 @extends('layouts.master')
 
 @section('content')
-
+    @if(session()->has('message'))
+        <div class="alert alert-success" style="margin-top: 1em;">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     <div class="row" style="margin-top: 1.5em">
         <div class="col-4" style="padding: 0 0 0 2em;">
             <a class="bottomBtn" href="{{Route('drankIndexKlant')}}"><img src="{{ URL::asset("/images/drinks.png") }}" style="width: 100%;"></a>
