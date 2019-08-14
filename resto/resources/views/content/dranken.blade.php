@@ -2,7 +2,14 @@
 
 @section('content')
 <div class="container" style="margin-bottom: 5em">
-    <h2 style="font-family: Steelfish; margin-top: 1em">Frisdranken</h2>
+    <div class="row" style="margin-top: 1em">
+        <div class="col-10"></div>
+        <div class="col-2" style="text-align: center">
+            <img style="width: 100%;" src="{{ URL::asset("/images/cart.png") }}">
+            <span class="badge-danger" style="padding: 0.2em">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+        </div>
+    </div>
+    <h2 style="font-family: Steelfish;">Frisdranken</h2>
     @foreach($frisdranken as $frisdrank)
         @foreach ($frisdrank->dranks as $soort)
             <div class="row">
@@ -19,7 +26,7 @@
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Bieren op vat</h2>
+    <h2 style="font-family: Steelfish;">Bieren op vat</h2>
     @foreach($bierenVat as $bierVat)
         @foreach ($bierVat->dranks as $soort)
             <div class="row">
@@ -30,13 +37,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em; text-align: center;">
-                    <a href="#" style="color: #e3342f">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Bieren op fles</h2>
+    <h2 style="font-family: Steelfish;">Bieren op fles</h2>
     @foreach($bierenFles as $bierFles)
         @foreach ($bierFles->dranks as $soort)
             <div class="row">
@@ -47,13 +54,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Trappisten</h2>
+    <h2 style="font-family: Steelfish;">Trappisten</h2>
     @foreach($trappisten as $trappist)
         @foreach ($trappist->dranks as $soort)
             <div class="row">
@@ -64,13 +71,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Abdijbieren</h2>
+    <h2 style="font-family: Steelfish;">Abdijbieren</h2>
     @foreach($abdijBieren as $abdijBier)
         @foreach ($abdijBier->dranks as $soort)
             <div class="row">
@@ -81,13 +88,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Fruitbieren</h2>
+    <h2 style="font-family: Steelfish;">Fruitbieren</h2>
     @foreach($fruitBieren as $fruitBier)
         @foreach ($fruitBier->dranks as $soort)
             <div class="row">
@@ -98,13 +105,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Apperitieven</h2>
+    <h2 style="font-family: Steelfish;">Apperitieven</h2>
     @foreach($apperitieven as $apperitief)
         @foreach ($apperitief->dranks as $soort)
             <div class="row">
@@ -115,13 +122,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Wijnen</h2>
+    <h2 style="font-family: Steelfish;">Wijnen</h2>
     @foreach($wijnen as $wijn)
         @foreach ($wijn->dranks as $soort)
             <div class="row">
@@ -132,13 +139,13 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
     @endforeach
     <hr>
-    <h2 style="font-family: Steelfish; margin-top: 1em">Sterke Dranken</h2>
+    <h2 style="font-family: Steelfish;">Sterke Dranken</h2>
     @foreach($sterkeDranken as $sterkeDrank)
         @foreach ($sterkeDrank->dranks as $soort)
             <div class="row">
@@ -149,7 +156,7 @@
                     €{{ $soort->drankPrijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
-                    <a href="#" style="color: #e3342f;">+</a>
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
                 </div>
             </div>
         @endforeach
