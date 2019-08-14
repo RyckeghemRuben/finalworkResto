@@ -3,22 +3,26 @@
 @section('content')
 
     @if(Session::has('cart'))
-        <div class="row">
+        <div class="row" style="margin-top: 1em;">
+            <div class="col-lg-12" style="font-family: Steelfish;">
+                <h2>Bestelling</h2>
+            </div>
             <div class="col-lg-12">
                 <ul class="list-group">
                     @foreach($products as $product)
                         <li class="list-group-item">
-                            <span class="badge-danger">{{$product['qty']}}</span>
+                            <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
                             <strong>{{$product['item']['drankNaam']}}</strong>
-                            <span class="label label-succes">{{$product['drankPrijs']}}</span>
+                            <span class="label label-succes">€{{$product['drankPrijs']}}</span>
                         </li>
                     @endforeach
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top: 0.5em;">
             <div class="col-lg-12">
-                <strong>Totaal: {{$totalPrice}}</strong>
+                <strong>Totaal: €{{$totalPrice}}</strong>
+                <button class="btn btn-outline-danger">Bestellen</button>
             </div>
         </div>
     @else

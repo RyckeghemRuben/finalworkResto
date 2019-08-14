@@ -7,7 +7,7 @@
         <div class="col-2" style="text-align: center">
             <a href="{{route('product.bestelling')}}">
             <img style="width: 100%;" src="{{ URL::asset("/images/cart.png") }}">
-            <span class="badge-danger" style="padding: 0.2em">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+            <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
             </a>
         </div>
     </div>
