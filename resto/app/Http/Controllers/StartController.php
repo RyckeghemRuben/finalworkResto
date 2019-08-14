@@ -48,7 +48,38 @@ class StartController extends Controller
 
         $bierenVat = Soort::with('dranks')
             ->where('id','=',2)->get();
-        return view('content.dranken',['frisdranken'=>$frisdranken,'bierenVat'=>$bierenVat]);
+
+        $bierenFles = Soort::with('dranks')
+            ->where('id','=',3)->get();
+
+        $trappisten = Soort::with('dranks')
+            ->where('id','=',4)->get();
+
+        $abdijBieren = Soort::with('dranks')
+            ->where('id','=',5)->get();
+
+        $fruitBieren = Soort::with('dranks')
+            ->where('id','=',6)->get();
+
+        $apperitieven = Soort::with('dranks')
+            ->where('id','=',7)->get();
+
+        $sterkeDranken = Soort::with('dranks')
+            ->where('id','=',8)->get();
+
+        $wijnen = Soort::with('dranks')
+            ->where('id','=',9)->get();
+
+
+
+
+        return view('content.dranken',['frisdranken'=>$frisdranken,'bierenVat'=>$bierenVat,
+            'bierenFles'=>$bierenFles, 'trappisten'=>$trappisten, 'abdijBieren'=>$abdijBieren,
+            'fruitBieren'=>$fruitBieren, 'apperitieven'=>$apperitieven, 'sterkeDranken'=>$sterkeDranken,
+            'wijnen'=>$wijnen]);
+
+
+
     }
 
 }

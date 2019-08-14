@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container" style="margin-bottom: 1.5em">
-    @include('partials.menu-header')
+    @include('partials.admin-header')
     @yield('content')
 </div>
 <!-- Optional JavaScript -->
