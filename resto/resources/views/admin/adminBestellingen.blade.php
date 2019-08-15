@@ -1,5 +1,10 @@
 @extends('layouts.adminmenu')
 @section('content')
+    <script type="text/javascript">
+        setTimeout(function(){
+            location.reload();
+        },5000);
+    </script>
  <div class="container">
      <div class="row" style="margin-top: 1em; font-family: Steelfish;">
          <div class="col-lg-10"><h1>Bestellingen</h1></div>
