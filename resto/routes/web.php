@@ -85,6 +85,10 @@ Route::get('/addToCart/{id}',[
     'uses'=>'ProductController@getAddToCart',
     'as'=>'product.addToCart'
 ]);
+Route::get('/addToBestelCart/{id}',[
+    'uses'=>'ProductController@getAddToBestelCart',
+    'as'=>'product.addToBestelCart'
+]);
 
 Route::get('/bestelling',[
     'uses'=>'ProductController@getBestelling',
@@ -94,6 +98,11 @@ Route::get('/bestelling',[
 Route::get('/verminderMetEén/{id}',[
     'uses'=>'ProductController@getVerminderMetEén',
     'as'=>'verminderMetEén'
+]);
+
+Route::get('/verwijderItem/{id}',[
+    'uses'=>'ProductController@getVerwijderItem',
+    'as' => 'verwijderItem'
 ]);
 
 Route::get('/besteld',[

@@ -13,16 +13,19 @@
             <div class="col-lg-12">
                     @foreach($products as $product)
                         <div class="row" style="margin-top: 1em">
-                            <div class="col-8" style="padding-top: 0.5em">
+                            <div class="col-6" style="padding-top: 0.5em">
                                 <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
                                 <strong>{{$product['item']['naam']}}:</strong>
                                 <span class="label label-succes">€{{$product['prijs']}}</span>
                             </div>
-                            <div class="col-2" style="padding-right: 0;">
+                            <div class="col-2" style="padding-right: 0; padding-left: 0;">
+                                <a href="{{route('product.addToBestelCart',['id' => $product['item']['id']])}}" class="btn btn-outline-dark">+</a>
+                            </div>
+                            <div class="col-2" style="padding-right: 0; padding-left: 0;">
                                 <a href="{{route('verminderMetEén',['id'=>$product['item']['id']])}}" class="btn btn-outline-dark">-</a>
                             </div>
-                            <div class="col-2" style="padding-left: 0;">
-                                <a href="#" class="btn btn-outline-danger">X</a>
+                            <div class="col-2" style="padding-left: 0; ">
+                                <a href="{{route('verwijderItem',['id'=>$product['item']['id']])}}" class="btn btn-outline-danger">X</a>
                             </div>
                         </div>
                     @endforeach

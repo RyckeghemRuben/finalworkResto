@@ -44,7 +44,15 @@ class Cart
             unset($this->items[$id]);
         }
     }
+
+    public function verwijderItem($id){
+        $this->totalQty -= $this->items[$id]['qty'];
+        $this->totalPrice -= $this->items[$id]['prijs'];
+        unset($this->items[$id]);
+
+    }
 }
+
 
 
 

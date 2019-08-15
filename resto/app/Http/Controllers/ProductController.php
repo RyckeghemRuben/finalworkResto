@@ -21,6 +21,16 @@ class ProductController extends Controller
         return redirect()->route('drankIndexKlant');
     }
 
+    public function getAddToBestelCart(Request $request,$id){
+        $drank = Drank::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($drank,$drank->id);
+
+        $request->session()->put('cart',$cart);
+        return redirect()->route('product.bestelling');
+    }
+
     public function getBestelling(){
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
@@ -43,10 +53,20 @@ class ProductController extends Controller
     public function getVerminderMetEén($id){
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
-
         $cart->verminderMetEén($id);
 
         Session::put('cart',$cart);
         return redirect()->route('product.bestelling');
+    }
+
+    public function getVerwijderItem($id){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+
+        $cart->verwijderItem($id);
+
+        Session::put('cart',$cart);
+        return redirect()->route('product.bestelling');
+
     }
 }
