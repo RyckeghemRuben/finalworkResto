@@ -33,7 +33,7 @@
                     <form method="post" action="{{route('addTostorage')}}" class="test">
                         @csrf
                         <div class="form-group">
-                            <label for="tafelNummer">Tafelnummer:</label>
+                            <label for="tafelNummer"><h3>Tafelnummer:</h3></label>
                             <input type="text" class="form-control" name="tafelNummer" placeholder="Enter tafelnummer">
                         </div>
                         <input type="submit" class="btn btn-outline-danger">

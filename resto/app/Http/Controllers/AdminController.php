@@ -39,7 +39,16 @@ class AdminController extends Controller
 
     public function getKlantBestelling(){
         $bestellingen = Bestelling::all();
+        $bestellingen->transform(function ($bestelling,$key){
+            $bestelling->cart = unserialize($bestelling->cart);
+            return $bestelling;
+        });
+        return view('admin.adminBestellingen',['bestellingen'=>$bestellingen]);
+    }
 
-        return view('admin.adminBestellingen');
+    public function getBestellingDelete($id){
+        $bestelling = Bestelling::find($id);
+        $bestelling->delete();
+        return redirect()->action('AdminController@getKlantBestelling');
     }
 }

@@ -99,3 +99,7 @@ Route::get('/klantenBestellingen',[
     'uses'=>'AdminController@getKlantBestelling',
     'as'=>'admin.klantBestelling'
 ]);
+Route::get('bestellingDelete/{id}',[
+    'uses' => 'AdminController@getBestellingDelete',
+    'as' => 'bestellingDelete'
+]);
