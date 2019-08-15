@@ -15,8 +15,8 @@
                     @foreach($products as $product)
                         <li class="list-group-item">
                             <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
-                            <strong>{{$product['item']['drankNaam']}}:</strong>
-                            <span class="label label-succes">€{{$product['drankPrijs']}}</span>
+                            <strong>{{$product['item']['naam']}}:</strong>
+                            <span class="label label-succes">€{{$product['prijs']}}</span>
                             <button class="btn btn-outline-danger">-</button>
                         </li>
                     @endforeach

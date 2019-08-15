@@ -73,10 +73,13 @@ class StartController extends Controller
         $wijnen = Soort::with('dranks')
             ->where('id','=',9)->get();
 
+        $warmeDranken = Soort::with('dranks')
+            ->where('id','=',10)->get();
+
         return view('content.dranken',['frisdranken'=>$frisdranken,'bierenVat'=>$bierenVat,
             'bierenFles'=>$bierenFles, 'trappisten'=>$trappisten, 'abdijBieren'=>$abdijBieren,
             'fruitBieren'=>$fruitBieren, 'apperitieven'=>$apperitieven, 'sterkeDranken'=>$sterkeDranken,
-            'wijnen'=>$wijnen]);
+            'wijnen'=>$wijnen, 'warmeDranken'=>$warmeDranken]);
     }
 
     public function getKlantOproep(){

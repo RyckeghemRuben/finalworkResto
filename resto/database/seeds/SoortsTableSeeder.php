@@ -30,5 +30,7 @@ class SoortsTableSeeder extends Seeder
         $soort->save();
         $soort = new Soort(['name' => 'Wijn']);
         $soort->save();
+        $soort = new Soort(['name' => 'Warme Dranken']);
+        $soort->save();
     }
 }

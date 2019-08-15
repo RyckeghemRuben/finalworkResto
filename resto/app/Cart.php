@@ -21,25 +21,20 @@ class Cart
     }
 
     public function add($item,$id){
-        $storedItem = ['qty'=>0,'drankPrijs'=> $item->drankPrijs, 'item'=> $item ];
+        $storedItem = ['qty'=>0,'prijs'=> $item->prijs, 'item'=> $item ];
         if($this->items){
             if(array_key_exists($id, $this->items)){
                 $storedItem = $this->items[$id];
             }
         }
         $storedItem['qty']++;
-        $storedItem['drankPrijs'] = $item->drankPrijs * $storedItem['qty'];
+        $storedItem['prijs'] = $item->prijs * $storedItem['qty'];
         $this->items[$id] = $storedItem;
         $this->totalQty++;
-        $this->totalPrice += $item->drankPrijs;
+        $this->totalPrice += $item->prijs;
     }
 
-    public function verminderMetEén($id){
-        $this->items[$id]['qty']--;
-        $this->items[$id]['drankPrijs']-= $this->items[$id]['item']['drankPrijs'];
-        $this->totalQty--;
-        $this->totalPrice -= $this->items[$id]['item']['drankPrijs'];
-    }
+
 }
 
 

@@ -10,9 +10,9 @@ use Illuminate\Support\Facades\DB;
 class DrankController extends Controller
 {
     public function getDrankIndex(Request $request){
-        $drankNaam = $request->input('search');
-        $gezochteDrank = Drank::orderBy('drankNaam','asc')
-            ->where('drankNaam','LIKE', '%'.$drankNaam.'%')
+        $naam = $request->input('search');
+        $gezochteDrank = Drank::orderBy('naam','asc')
+            ->where('naam','LIKE', '%'.$naam.'%')
             ->get();
         return view('admin.adminDranken',['gezochteDrank'=> $gezochteDrank]);
     }
@@ -20,13 +20,13 @@ class DrankController extends Controller
     public function postCreateDrank(Request $request){
 
         $this->validate($request,[
-            'drankNaam' => 'required',
-            'drankPrijs' => 'required|numeric'
+            'naam' => 'required',
+            'prijs' => 'required|numeric'
         ]);
 
         $drankje = new Drank([
-            'drankNaam' => $request->input('drankNaam'),
-            'drankPrijs' => $request->input('drankPrijs')
+            'naam' => $request->input('naam'),
+            'prijs' => $request->input('prijs')
         ]);
 
         $drankje->save();
@@ -41,16 +41,17 @@ class DrankController extends Controller
 
     public function postUpdateDrank(Request $request){
         $this->validate($request,[
-            'drankNaam' => 'required',
-            'drankPrijs' => 'required|numeric'
+            'naam' => 'required',
+            'prijs' => 'required|numeric',
+            'soorts'=>'required'
         ]);
 
         //haal aan te passen item op uit database
         $drankje = Drank::find($request->input('id'));
 
         //pas waarden aan
-        $drankje->drankNaam =$request->input('drankNaam');
-        $drankje->drankPrijs=$request->input('drankPrijs');
+        $drankje->naam =$request->input('naam');
+        $drankje->prijs=$request->input('prijs');
 
         $drankje->save();
 

@@ -37,9 +37,9 @@
                      <hr style="border-color: #e3342f;">
                      @foreach($bestelling->cart->items as $item)
                             <p>
-                                <b>{{$item['item']['drankNaam']}}</b> | X <b>{{$item['qty']}}</b>
+                                <b>{{$item['item']['naam']}}</b> | X <b>{{$item['qty']}}</b>
 
-                                  | € {{$item['drankPrijs']}}
+                                  | € {{$item['prijs']}}
                             </p>
                          @endforeach
                  </div>

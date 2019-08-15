@@ -15,8 +15,8 @@ class CreateDranksTable extends Migration
     {
         Schema::create('dranks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('drankNaam');
-            $table->integer('drankPrijs');
+            $table->string('naam');
+            $table->integer('prijs');
             $table->timestamps();
         });
     }

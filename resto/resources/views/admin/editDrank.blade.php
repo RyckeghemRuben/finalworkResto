@@ -6,11 +6,11 @@
         <form method="post" action="{{route('drankUpdate')}}" style="margin-top: 1em;">
             <div class="form-group">
                 <label for = "title">Naam drank</label>
-                <input type="text" class="form-control" id="drankNaam" name="drankNaam" value="{{$drankje->drankNaam}}">
+                <input type="text" class="form-control" id="naam" name="naam" value="{{$drankje->naam}}">
             </div>
             <div class="form-group">
                 <label for="content">Prijs</label>
-                <input type="text" class="form-control" id="drankPrijs" name="drankPrijs" value="{{$drankje->drankPrijs}}">
+                <input type="text" class="form-control" id="prijs" name="prijs" value="{{$drankje->prijs}}">
             </div>
             @foreach($soorts as $soort)
 

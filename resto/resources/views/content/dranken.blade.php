@@ -18,10 +18,10 @@
         @foreach ($frisdrank->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em; text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -35,10 +35,10 @@
         @foreach ($bierVat->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em; text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f">+</a>
@@ -52,10 +52,10 @@
         @foreach ($bierFles->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -69,10 +69,10 @@
         @foreach ($trappist->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -86,10 +86,10 @@
         @foreach ($abdijBier->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -103,10 +103,10 @@
         @foreach ($fruitBier->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -120,10 +120,10 @@
         @foreach ($apperitief->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -137,10 +137,10 @@
         @foreach ($wijn->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -154,10 +154,10 @@
         @foreach ($sterkeDrank->dranks as $soort)
             <div class="row">
                 <div class="col-7" style="margin-top: 0.5em ">
-                    {{ $soort->drankNaam }}<br>
+                    {{ $soort->naam }}<br>
                 </div>
                 <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
-                    €{{ $soort->drankPrijs }}
+                    €{{ $soort->prijs }}
                 </div>
                 <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
                     <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
@@ -166,6 +166,22 @@
         @endforeach
     @endforeach
     <hr>
+    <h2 style="font-family: Steelfish;">Warme Dranken</h2>
+    @foreach($warmeDranken as $warmeDrank)
+        @foreach ($warmeDrank->dranks as $soort)
+            <div class="row">
+                <div class="col-7" style="margin-top: 0.5em ">
+                    {{ $soort->naam }}<br>
+                </div>
+                <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                    €{{ $soort->prijs }}
+                </div>
+                <div class="col-2" style="margin-top: 0.5em;  text-align: center;">
+                    <a href="{{route('product.addToCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                </div>
+            </div>
+        @endforeach
+    @endforeach
 </div>
 <div class="row">
     <nav class="navbar fixed-bottom navbar-light bg-light">
