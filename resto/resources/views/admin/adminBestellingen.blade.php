@@ -5,7 +5,19 @@
             location.reload();
         },5000);
     </script>
- <div class="container">
+ <div class="container" style="margin-top: 1em; ">
+     @foreach($oproepen as $oproep)
+             <div class="alert alert-info alert-block">
+                 <div class="row">
+                     <div class="col-10">
+                         <strong>Tafelnummer {{ $oproep->tafelnummer }} vraagt om hulp.</strong>
+                     </div>
+                     <div class="col-2">
+                         <a href="{{route('oproepDelete',['id'=>$oproep->id])}}" class="btn-outline-info" type="button">X</a>
+                     </div>
+                 </div>
+             </div>
+         @endforeach
      <div class="row" style="margin-top: 1em; font-family: Steelfish;">
          <div class="col-lg-10"><h1>Bestellingen</h1></div>
      </div>

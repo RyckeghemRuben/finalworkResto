@@ -15,7 +15,9 @@
             <img style="width: 100%;" src="{{ URL::asset("/images/food.png") }}">
         </div>
         <div class="col-4" style="padding-left: 0; padding-right: 2em;">
+            <a href="{{Route('klantOproep')}}">
             <img style="width: 100%;" src="{{ URL::asset("/images/bell.png") }}">
+            </a>
         </div>
     </div>
     <div class="row" style="margin-top: 0.3em">
@@ -24,7 +26,7 @@
         </div>
         <div class="col-4">
             <a href="{{route('product.bestelling')}}">
-            <img style="width: 100%;" src="{{ URL::asset("/images/bill.png") }}">
+            <img style="width: 100%;" src="{{ URL::asset("/images/bigcart.png") }}">
             </a>
         </div>
         <div class="col-4" style="padding-left: 0; padding-right: 2em;">

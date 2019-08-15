@@ -7,6 +7,7 @@ use App\Drank;
 use Illuminate\Http\Request;
 use App\Soort;
 use App\Bestelling;
+use App\Oproep;
 
 
 class AdminController extends Controller
@@ -39,16 +40,23 @@ class AdminController extends Controller
 
     public function getKlantBestelling(){
         $bestellingen = Bestelling::all();
-        $bestellingen->transform(function ($bestelling,$key){
+        $oproepen = Oproep::all();
+        $bestellingen->transform(function ($bestelling){
             $bestelling->cart = unserialize($bestelling->cart);
             return $bestelling;
         });
-        return view('admin.adminBestellingen',['bestellingen'=>$bestellingen]);
+        return view('admin.adminBestellingen',['bestellingen'=>$bestellingen,'oproepen'=>$oproepen]);
     }
 
     public function getBestellingDelete($id){
         $bestelling = Bestelling::find($id);
         $bestelling->delete();
+        return redirect()->action('AdminController@getKlantBestelling');
+    }
+
+    public function getOproepDelete($id){
+        $oproep = Oproep::find($id);
+        $oproep->delete();
         return redirect()->action('AdminController@getKlantBestelling');
     }
 }

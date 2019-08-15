@@ -37,6 +37,10 @@ class ProductController extends Controller
 
         $bestelling->save();
         Session::forget('cart');
-        return redirect()->route('content.index')->with('message', 'Bestelling gemaakt!');
+        return redirect()->route('content.index')->with('message', 'Bestelling gemaakt');
+    }
+
+    public function getVerminderMetEén(){
+
     }
 }

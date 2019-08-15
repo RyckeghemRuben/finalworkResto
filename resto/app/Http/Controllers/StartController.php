@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Bestelling;
 use App\Soort;
 use function foo\func;
 use Illuminate\Http\Request;
 use Session;
 use App\Drank;
+use App\Oproep;
 
 class StartController extends Controller
 {
@@ -75,6 +77,15 @@ class StartController extends Controller
             'bierenFles'=>$bierenFles, 'trappisten'=>$trappisten, 'abdijBieren'=>$abdijBieren,
             'fruitBieren'=>$fruitBieren, 'apperitieven'=>$apperitieven, 'sterkeDranken'=>$sterkeDranken,
             'wijnen'=>$wijnen]);
+    }
+
+    public function getKlantOproep(){
+        $oproep = new Oproep();
+        $oproep->tafelnummer = Session::get('tafelNummer');
+
+        $oproep->save();
+
+        return redirect()->route('content.index')->with('message', 'Er wordt iemand naar jouw tafel gestuurd.');
     }
 
 }

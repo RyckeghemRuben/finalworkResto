@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart
 {
-    //deel van een tutorial https://www.youtube.com/watch?v=4J939dDUH4M&t=154s
+    //op basis van een tutorial https://www.youtube.com/watch?v=4J939dDUH4M&t=154s
 
     public $items = null;
     public $totalQty = 0;
@@ -33,4 +33,17 @@ class Cart
         $this->totalQty++;
         $this->totalPrice += $item->drankPrijs;
     }
+
+    public function verminderMetEén($id){
+        $this->items[$id]['qty']--;
+        $this->items[$id]['drankPrijs']-= $this->items[$id]['item']['drankPrijs'];
+        $this->totalQty--;
+        $this->totalPrice -= $this->items[$id]['item']['drankPrijs'];
+    }
 }
+
+
+
+
+
+

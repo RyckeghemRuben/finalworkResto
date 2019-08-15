@@ -103,3 +103,11 @@ Route::get('bestellingDelete/{id}',[
     'uses' => 'AdminController@getBestellingDelete',
     'as' => 'bestellingDelete'
 ]);
+Route::get('/klantOproep',[
+    'uses' => 'StartController@getKlantOproep',
+    'as' => 'klantOproep'
+]);
+Route::get('oproepDelete/{id}',[
+    'uses' => 'AdminController@getOproepDelete',
+    'as' => 'oproepDelete'
+]);
