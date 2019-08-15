@@ -21,7 +21,8 @@ class DrankController extends Controller
 
         $this->validate($request,[
             'naam' => 'required',
-            'prijs' => 'required|numeric'
+            'prijs' => 'required|numeric',
+            'soorts'=>'required'
         ]);
 
         $drankje = new Drank([

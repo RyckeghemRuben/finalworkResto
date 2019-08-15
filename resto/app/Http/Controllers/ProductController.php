@@ -40,7 +40,13 @@ class ProductController extends Controller
         return redirect()->route('content.index')->with('message', 'Bestelling gemaakt');
     }
 
-    public function getVerminderMetEén(){
+    public function getVerminderMetEén($id){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
 
+        $cart->verminderMetEén($id);
+
+        Session::put('cart',$cart);
+        return redirect()->route('product.bestelling');
     }
 }

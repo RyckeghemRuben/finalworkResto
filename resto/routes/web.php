@@ -91,6 +91,11 @@ Route::get('/bestelling',[
     'as'=>'product.bestelling'
 ]);
 
+Route::get('/verminderMetEén/{id}',[
+    'uses'=>'ProductController@getVerminderMetEén',
+    'as'=>'verminderMetEén'
+]);
+
 Route::get('/besteld',[
     'uses' => 'ProductController@getMaakBestelling',
     'as' => 'maakBestelling'

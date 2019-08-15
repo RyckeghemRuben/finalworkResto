@@ -1,7 +1,7 @@
 @extends('layouts.menu')
 
 @section('content')
-
+    <div class="container" style="margin-bottom: 20em;">
     @if(Session::has('cart'))
         <div class="row" style="margin-top: 1em;">
             <div class="col-lg-12" style="font-family: Steelfish;">
@@ -11,18 +11,25 @@
                 <h4>Tafelnummer: {{Session::get('tafelNummer')}}</h4>
             </div>
             <div class="col-lg-12">
-                <ul class="list-group">
                     @foreach($products as $product)
-                        <li class="list-group-item">
-                            <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
-                            <strong>{{$product['item']['naam']}}:</strong>
-                            <span class="label label-succes">€{{$product['prijs']}}</span>
-                            <button class="btn btn-outline-danger">-</button>
-                        </li>
+                        <div class="row" style="margin-top: 1em">
+                            <div class="col-8" style="padding-top: 0.5em">
+                                <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
+                                <strong>{{$product['item']['naam']}}:</strong>
+                                <span class="label label-succes">€{{$product['prijs']}}</span>
+                            </div>
+                            <div class="col-2" style="padding-right: 0;">
+                                <a href="{{route('verminderMetEén',['id'=>$product['item']['id']])}}" class="btn btn-outline-dark">-</a>
+                            </div>
+                            <div class="col-2" style="padding-left: 0;">
+                                <a href="#" class="btn btn-outline-danger">X</a>
+                            </div>
+                        </div>
                     @endforeach
-                </ul>
+
             </div>
         </div>
+        <hr>
         <div class="row" style="margin-top: 0.5em;">
             <div class="col-lg-12">
                 <strong>Totaal: €{{$totalPrice}}</strong>
@@ -60,5 +67,5 @@
             </div>
         </nav>
     </div>
-
+    </div>
 @endsection
