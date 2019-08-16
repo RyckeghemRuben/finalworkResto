@@ -46,7 +46,7 @@
     <div class="row" style="margin-top: 1em">
         <div class="col-lg-12">
             <div class="card" style="text-align: center">
-                <h1 style="font-family: Steelfish">Nog geen bestellingen</h1>
+                <h1 style="font-family: Steelfish">Maak een nieuwe bestelling</h1>
             </div>
         </div>
     </div>

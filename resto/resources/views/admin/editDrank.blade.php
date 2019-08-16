@@ -27,5 +27,11 @@
             @csrf
             <button type="submit" class="btn btn-danger">Submit</button>
         </form>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <a class="btn btn-outline-danger" href="{{url()->previous()}}">Terug</a>
+            </div>
+        </div>
     </div>
 @endsection

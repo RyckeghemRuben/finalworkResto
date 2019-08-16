@@ -33,6 +33,101 @@
                     </div>
                 @endforeach
             @endforeach
+            @if(DB::table('food_soort')->get('foodsoort_id')->where('foodsoort_id',2)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Versnaperingen</h2>
+            @endif
+            @foreach($snacks as $snack)
+                @foreach ($snack->foods as $soort)
+                    <div class="row">
+                        <div class="col-7" style="margin-top: 0.5em ">
+                            {{ $soort->naam }}<br>
+                        </div>
+                        <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                            €{{ $soort->prijs }}
+                        </div>
+                        <div class="col-2" style="margin-top: 0.5em; text-align: center;">
+                            <a href="{{route('product.addToFoodCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+            @if(DB::table('food_soort')->get('foodsoort_id')->where('foodsoort_id',3)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Voorgerechten</h2>
+            @endif
+            @foreach($snacks as $snack)
+                @foreach ($snack->foods as $soort)
+                    <div class="row">
+                        <div class="col-7" style="margin-top: 0.5em ">
+                            {{ $soort->naam }}<br>
+                        </div>
+                        <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                            €{{ $soort->prijs }}
+                        </div>
+                        <div class="col-2" style="margin-top: 0.5em; text-align: center;">
+                            <a href="{{route('product.addToFoodCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+            @if(DB::table('food_soort')->get('foodsoort_id')->where('foodsoort_id',4)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Hoofdgerechten</h2>
+            @endif
+            @foreach($snacks as $snack)
+                @foreach ($snack->foods as $soort)
+                    <div class="row">
+                        <div class="col-7" style="margin-top: 0.5em ">
+                            {{ $soort->naam }}<br>
+                        </div>
+                        <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                            €{{ $soort->prijs }}
+                        </div>
+                        <div class="col-2" style="margin-top: 0.5em; text-align: center;">
+                            <a href="{{route('product.addToFoodCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+            @if(DB::table('food_soort')->get('foodsoort_id')->where('foodsoort_id',5)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Desserts</h2>
+            @endif
+            @foreach($snacks as $snack)
+                @foreach ($snack->foods as $soort)
+                    <div class="row">
+                        <div class="col-7" style="margin-top: 0.5em ">
+                            {{ $soort->naam }}<br>
+                        </div>
+                        <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                            €{{ $soort->prijs }}
+                        </div>
+                        <div class="col-2" style="margin-top: 0.5em; text-align: center;">
+                            <a href="{{route('product.addToFoodCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
+            @if(DB::table('food_soort')->get('foodsoort_id')->where('foodsoort_id',6)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Wafels/Pannenkoeken</h2>
+            @endif
+            @foreach($snacks as $snack)
+                @foreach ($snack->foods as $soort)
+                    <div class="row">
+                        <div class="col-7" style="margin-top: 0.5em ">
+                            {{ $soort->naam }}<br>
+                        </div>
+                        <div class="col-3" style="border-right: 0.5px; border-left: 0px; border-top: 0px; border-bottom: 0px; border-style: solid; border-color: #e3342f; margin-top: 0.5em">
+                            €{{ $soort->prijs }}
+                        </div>
+                        <div class="col-2" style="margin-top: 0.5em; text-align: center;">
+                            <a href="{{route('product.addToFoodCart',['id' => $soort->id])}}" style="color: #e3342f;">+</a>
+                        </div>
+                    </div>
+                @endforeach
+            @endforeach
     @endif
     <div class="row">
         <nav class="navbar fixed-bottom navbar-light bg-light">

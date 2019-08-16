@@ -20,5 +20,8 @@
         @endforeach
         @endif
     <hr>
+            <div class="row">
+                    <a class="btn btn-outline-danger" href="{{url()->previous()}}">Terug</a>
+            </div>
     </div>
 @endsection

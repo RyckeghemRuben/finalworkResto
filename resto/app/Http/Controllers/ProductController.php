@@ -32,7 +32,7 @@ class ProductController extends Controller
         return redirect()->route('foodIndexKlant');
     }
 
-    
+
 
     public function getBestelling(){
         $oldCart = Session::get('cart');

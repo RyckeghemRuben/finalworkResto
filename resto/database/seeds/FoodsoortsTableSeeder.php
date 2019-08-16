@@ -22,5 +22,7 @@ class FoodsoortsTableSeeder extends Seeder
         $foodsoort->save();
         $foodsoort = new Foodsoort(['name' => 'Desserts']);
         $foodsoort->save();
+        $foodsoort = new Foodsoort(['name' => 'Wafels/Pannenkoeken']);
+        $foodsoort->save();
     }
 }

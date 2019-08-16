@@ -13,7 +13,7 @@
             <a class="bottomBtn" href="{{Route('drankIndexKlant')}}"><img src="{{ URL::asset("/images/drinks.png") }}" style="width: 100%;"></a>
         </div>
         <div class="col-4">
-            <img style="width: 100%;" src="{{ URL::asset("/images/food.png") }}">
+            <a class="bottomBtn" href="{{Route('foodIndexKlant')}}"><img src="{{ URL::asset("/images/food.png") }}" style="width: 100%;"></a>
         </div>
         <div class="col-4" style="padding-left: 0; padding-right: 2em;">
             <a href="{{Route('klantOproep')}}">
