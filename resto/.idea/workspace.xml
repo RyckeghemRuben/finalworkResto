@@ -97,12 +97,12 @@
         <counts>
           <entry key="css" value="392" />
           <entry key="js" value="1" />
-          <entry key="php" value="19377" />
+          <entry key="php" value="19423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="9308" />
+          <entry key="Blade" value="9354" />
           <entry key="CSS" value="392" />
           <entry key="JavaScript" value="1" />
           <entry key="PHP" value="10069" />
@@ -113,14 +113,14 @@
           <entry key="css" value="5" />
           <entry key="env" value="1" />
           <entry key="js" value="2" />
-          <entry key="php" value="311" />
+          <entry key="php" value="314" />
           <entry key="scss" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="Blade" value="145" />
+          <entry key="Blade" value="148" />
           <entry key="CSS" value="5" />
           <entry key="JavaScript" value="2" />
           <entry key="PHP" value="166" />
@@ -165,19 +165,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/content/gerechten.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/content/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="116" column="43" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
+            <state relative-caret-position="375">
+              <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/editDrank.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/content/gerechten.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+            <state relative-caret-position="301">
+              <caret line="143" column="121" selection-start-line="143" selection-start-column="121" selection-end-line="143" selection-end-column="121" />
+              <folding>
+                <element signature="e#8017#8037#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/content/dranken.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="221" column="117" selection-start-line="221" selection-start-column="100" selection-end-line="221" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/content/bestelling.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="120" selection-start-line="65" selection-start-column="120" selection-end-line="65" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -273,12 +294,9 @@
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FoodController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/resources/views/content/dranken.blade.php" />
         <option value="$PROJECT_DIR$/app/Cart.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" />
-        <option value="$PROJECT_DIR$/resources/views/content/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/content/bestelling.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/FoodsoortsTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/createDrank.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/createFood.blade.php" />
@@ -288,6 +306,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/adminFood.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/StartController.php" />
         <option value="$PROJECT_DIR$/resources/views/content/gerechten.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/content/dranken.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/content/bestelling.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/content/index.blade.php" />
       </list>
     </option>
   </component>
@@ -457,6 +478,12 @@
               <item name="resto" type="b2602c69:ProjectViewProjectNode" />
               <item name="resto" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="resto" type="b2602c69:ProjectViewProjectNode" />
+              <item name="resto" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -569,12 +596,12 @@
       <updated>1565352519160</updated>
       <workItem from="1565352522650" duration="470000" />
       <workItem from="1565353085972" duration="17136000" />
-      <workItem from="1565433938882" duration="98402000" />
+      <workItem from="1565433938882" duration="98979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116008000" />
+    <option name="totallyTimeSpent" value="116585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -819,25 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/content/dranken.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3076">
-          <caret line="215" column="65" selection-start-line="215" selection-start-column="65" selection-end-line="215" selection-end-column="65" />
-          <folding>
-            <element signature="e#689#720#0#HTML" expanded="true" />
-            <element signature="e#1700#1731#0#HTML" expanded="true" />
-            <element signature="e#2604#2635#0#HTML" expanded="true" />
-            <element signature="e#3549#3580#0#HTML" expanded="true" />
-            <element signature="e#4490#4521#0#HTML" expanded="true" />
-            <element signature="e#5435#5466#0#HTML" expanded="true" />
-            <element signature="e#6380#6411#0#HTML" expanded="true" />
-            <element signature="e#7329#7360#0#HTML" expanded="true" />
-            <element signature="e#8254#8285#0#HTML" expanded="true" />
-            <element signature="e#9208#9239#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -859,20 +867,6 @@
           <folding>
             <element signature="e#7#389#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/content/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/content/bestelling.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="48" column="77" selection-start-line="48" selection-start-column="77" selection-end-line="48" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -980,8 +974,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/content/gerechten.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="116" column="43" selection-start-line="116" selection-start-column="43" selection-end-line="116" selection-end-column="43" />
+        <state relative-caret-position="301">
+          <caret line="143" column="121" selection-start-line="143" selection-start-column="121" selection-end-line="143" selection-end-column="121" />
+          <folding>
+            <element signature="e#8017#8037#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/content/dranken.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="221" column="117" selection-start-line="221" selection-start-column="100" selection-end-line="221" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/content/bestelling.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="120" selection-start-line="65" selection-start-column="120" selection-end-line="65" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/content/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="78" selection-start-line="25" selection-start-column="78" selection-end-line="25" selection-end-column="78" />
         </state>
       </provider>
     </entry>

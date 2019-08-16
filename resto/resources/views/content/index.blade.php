@@ -23,7 +23,7 @@
     </div>
     <div class="row" style="margin-top: 0.3em">
         <div class="col-4" style="padding: 0 0 0 2em;">
-            <img style="width: 100%;" src="{{ URL::asset("/images/history.png") }}">
+            <img style="width: 100%;" src="{{ URL::asset("/images/announcement.png") }}">
         </div>
         <div class="col-4">
             <a href="{{route('product.bestelling')}}">

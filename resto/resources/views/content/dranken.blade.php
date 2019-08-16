@@ -219,7 +219,7 @@
             <a  class="navbar-brand" href="{{route('klantOproep')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBell.png") }}"></a>
         </div>
         <div class="col">
-            <a  class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnHistory.png") }}"></a>
+            <a  class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/announcementSmall.png") }}"></a>
         </div>
         <div class="col">
             <a class="navbar-brand" href="{{route('product.bestelling')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBill.png") }}"></a>
