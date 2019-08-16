@@ -9,10 +9,10 @@ class FoodController extends Controller
 
     public function getFoodIndex(Request $request){
         $naam = $request->input('search');
-        $gezochteFood = Food::orderBy('naam','asc')
+        $gezochteFoods = Food::orderBy('naam','asc')
             ->where('naam','LIKE', '%'.$naam.'%')
             ->get();
-        return view('admin.adminFood',['gezochteFood'=> $gezochteFood]);
+        return view('admin.adminFood',['gezochteFoods'=> $gezochteFoods]);
     }
 
     public function postCreateFood(Request $request){
@@ -30,11 +30,35 @@ class FoodController extends Controller
 
         $foodje->save();
 
-
-
         //tags opslaan
         $foodje->foodsoorts()->sync(
             $request->input('soorts')===null ? '' : $request->input('soorts'));
         return redirect()->route('adminEten');
     }
+
+    public function postUpdateFood(Request $request){
+        $this->validate($request,[
+            'naam' => 'required',
+            'prijs' => 'required|numeric',
+            'soorts'=>'required'
+        ]);
+
+        //haal aan te passen item op uit database
+        $foodje = Food::find($request->input('id'));
+
+        //pas waarden aan
+        $foodje->naam =$request->input('naam');
+        $foodje->prijs=$request->input('prijs');
+
+        $foodje->save();
+
+
+        //tags opslaan
+        $foodje->foodsoorts()->sync(
+            $request->input('soorts')===null ? '' : $request->input('soorts'));
+
+        return redirect()->route('adminEten');
+    }
+
+
 }

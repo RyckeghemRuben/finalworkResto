@@ -8,14 +8,14 @@
         <input type="text" name="search" id="search" class="form-control" placeholder="search"><br>
     </form>
     <div class="container">
-        @if($gezochteFood != null)
-            @foreach($gezochteFood as $gezocht)
+        @if($gezochteFoods != null)
+            @foreach($gezochteFoods as $gezochteFood)
                 <div class="row" style="font-family: Steelfish; margin-bottom: 0.5em">
                     <div class="col-8" style="padding-left: 0;">
-                        <h4>{{$gezocht->naam}}</h4>
+                        <h4>{{$gezochteFood->naam}}</h4>
                     </div>
-                    <a class="col-2 btn btn-outline-info btn-xs"  href="{{route('editDrankPagina',['id'=>$gezocht->id])}}" role="button">Edit</a>
-                    <a class="col-2 btn btn-outline-danger btn-xs" href="{{route('drankDelete',['id'=>$gezocht->id])}}" role="button">X</a>
+                    <a class="col-2 btn btn-outline-info btn-xs"  href="{{route('editFoodPagina',['id'=>$gezochteFood->id])}}" role="button">Edit</a>
+                    <a class="col-2 btn btn-outline-danger btn-xs" href="{{route('foodDelete',['id'=>$gezochteFood->id])}}" role="button">X</a>
                 </div>
             @endforeach
         @endif

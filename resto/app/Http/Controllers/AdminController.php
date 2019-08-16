@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Soort;
 use App\Bestelling;
 use App\Oproep;
+use App\Food;
 use App\Foodsoort;
 
 
@@ -64,6 +65,25 @@ class AdminController extends Controller
     function getFoodCreate(){
         $foodsoorts = Foodsoort::all();
         return view('admin.createFood',['foodsoorts'=>$foodsoorts]);
+    }
+
+    function getFoodEdit($id){
+        $foodje = Food::find($id);
+        $foodsoorts = Foodsoort::all();
+
+        return view('admin.editFood',[
+            'foodje' => $foodje,
+            'foodId'=>$id,
+            'foodsoorts' => $foodsoorts
+        ]);
+    }
+
+    public function getFoodDelete($id){
+        $foodje = Food::find($id);
+        $foodje->foodsoorts()->detach();
+        $foodje->delete();
+
+        return redirect()->action('FoodController@getFoodIndex');
     }
 
 }

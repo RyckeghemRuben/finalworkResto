@@ -141,7 +141,7 @@ Route::get('/eten',[
     'as' => 'adminEten'
 ]);
 
-Route::post('/createFood',[
+Route::post('/adminCreateFood',[
     'uses' => 'FoodController@postCreateFood',
     'as' => 'foodCreate'
 ]);
@@ -151,3 +151,17 @@ Route::get('/createFood',[
     'as' =>'admin.createFood'
 ]);
 
+Route::get('foodEdit/{id}',[
+    'uses' => 'AdminController@getFoodEdit',
+    'as' => 'editFoodPagina'
+]);
+
+Route::post('/foodUpdate',[
+    'uses' => 'FoodController@postUpdateFood',
+    'as' => 'foodUpdate'
+]);
+
+Route::get('foodDelete/{id}',[
+    'uses' => 'AdminController@getFoodDelete',
+    'as' => 'foodDelete'
+]);
