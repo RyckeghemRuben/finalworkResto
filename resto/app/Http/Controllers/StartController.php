@@ -95,7 +95,21 @@ class StartController extends Controller
     public function getFoodIndexKlant(){
         $snacks = Foodsoort::with('foods')
             ->where('id','=',1)->get();
-        return view('content.gerechten',['snacks'=>$snacks]);
+        $versnaperingen = Foodsoort::with('foods')
+            ->where('id','=',2)->get();
+        $voorgerechten = Foodsoort::with('foods')
+            ->where('id','=',3)->get();
+        $hoofdgerechten = Foodsoort::with('foods')
+            ->where('id','=',4)->get();
+        $desserts = Foodsoort::with('foods')
+            ->where('id','=',5)->get();
+        $wafelspannenkoeken = Foodsoort::with('foods')
+            ->where('id','=',6)->get();
+
+
+        return view('content.gerechten',['snacks'=>$snacks,'versnaperingen'=>$versnaperingen,
+            'voorgerechten'=>$voorgerechten,'hoofdgerechten'=>$hoofdgerechten,'desserts'=>$desserts,
+            'wafelspannenkoeken'=>$wafelspannenkoeken]);
     }
 }
 

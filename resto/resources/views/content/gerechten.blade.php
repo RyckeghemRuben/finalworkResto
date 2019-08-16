@@ -37,8 +37,8 @@
                 <hr>
                 <h2 style="font-family: Steelfish;">Versnaperingen</h2>
             @endif
-            @foreach($snacks as $snack)
-                @foreach ($snack->foods as $soort)
+            @foreach($versnaperingen as $versnapering)
+                @foreach ($versnapering->foods as $soort)
                     <div class="row">
                         <div class="col-7" style="margin-top: 0.5em ">
                             {{ $soort->naam }}<br>
@@ -56,8 +56,8 @@
                 <hr>
                 <h2 style="font-family: Steelfish;">Voorgerechten</h2>
             @endif
-            @foreach($snacks as $snack)
-                @foreach ($snack->foods as $soort)
+            @foreach($voorgerechten as $voorgerecht)
+                @foreach ($voorgerecht->foods as $soort)
                     <div class="row">
                         <div class="col-7" style="margin-top: 0.5em ">
                             {{ $soort->naam }}<br>
@@ -75,8 +75,8 @@
                 <hr>
                 <h2 style="font-family: Steelfish;">Hoofdgerechten</h2>
             @endif
-            @foreach($snacks as $snack)
-                @foreach ($snack->foods as $soort)
+            @foreach($hoofdgerechten as $hoofdgerecht)
+                @foreach ($hoofdgerecht->foods as $soort)
                     <div class="row">
                         <div class="col-7" style="margin-top: 0.5em ">
                             {{ $soort->naam }}<br>
@@ -94,8 +94,8 @@
                 <hr>
                 <h2 style="font-family: Steelfish;">Desserts</h2>
             @endif
-            @foreach($snacks as $snack)
-                @foreach ($snack->foods as $soort)
+            @foreach($desserts as $dessert)
+                @foreach ($dessert->foods as $soort)
                     <div class="row">
                         <div class="col-7" style="margin-top: 0.5em ">
                             {{ $soort->naam }}<br>
@@ -113,8 +113,8 @@
                 <hr>
                 <h2 style="font-family: Steelfish;">Wafels/Pannenkoeken</h2>
             @endif
-            @foreach($snacks as $snack)
-                @foreach ($snack->foods as $soort)
+            @foreach($wafelspannenkoeken as $wafelspannenkoek)
+                @foreach ($wafelspannenkoek->foods as $soort)
                     <div class="row">
                         <div class="col-7" style="margin-top: 0.5em ">
                             {{ $soort->naam }}<br>
