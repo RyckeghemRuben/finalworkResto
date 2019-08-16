@@ -113,6 +113,10 @@ Route::get('/verminderMetEén/{id}',[
     'uses'=>'ProductController@getVerminderMetEén',
     'as'=>'verminderMetEén'
 ]);
+Route::get('/vermeerderMetEén/{id}',[
+    'uses'=>'ProductController@getVermeerderMetEén',
+    'as'=>'vermeerderMetEén'
+]);
 
 Route::get('/verwijderItem/{id}',[
     'uses'=>'ProductController@getVerwijderItem',

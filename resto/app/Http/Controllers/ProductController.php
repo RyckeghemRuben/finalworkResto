@@ -32,16 +32,7 @@ class ProductController extends Controller
         return redirect()->route('foodIndexKlant');
     }
 
-
-    public function getAddToBestelCart(Request $request,$id){
-        $drank = Drank::find($id);
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
-        $cart->add($drank,$drank->id);
-
-        $request->session()->put('cart',$cart);
-        return redirect()->route('product.bestelling');
-    }
+    
 
     public function getBestelling(){
         $oldCart = Session::get('cart');
@@ -66,6 +57,14 @@ class ProductController extends Controller
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->verminderMetEén($id);
+
+        Session::put('cart',$cart);
+        return redirect()->route('product.bestelling');
+    }
+    public function getVermeerderMetEén($id){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->vermeerderMetEén($id);
 
         Session::put('cart',$cart);
         return redirect()->route('product.bestelling');

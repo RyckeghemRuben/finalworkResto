@@ -35,14 +35,21 @@ class Cart
     }
 
     public function verminderMetEén($id){
-        $this->items[$id]['qty']--;
-        $this->items[$id]['prijs'] -= $this->items[$id]['item']['prijs'];
-        $this->totalQty--;
-        $this->totalPrice -= $this->items[$id]['item']['prijs'];
+    $this->items[$id]['qty']--;
+    $this->items[$id]['prijs'] -= $this->items[$id]['item']['prijs'];
+    $this->totalQty--;
+    $this->totalPrice -= $this->items[$id]['item']['prijs'];
 
-        if($this->items[$id]['qty']<=0){
-            unset($this->items[$id]);
-        }
+    if($this->items[$id]['qty']<=0){
+        unset($this->items[$id]);
+    }
+}
+    public function vermeerderMetEén($id){
+        $this->items[$id]['qty']++;
+        $this->items[$id]['prijs'] += $this->items[$id]['item']['prijs'];
+        $this->totalQty++;
+        $this->totalPrice += $this->items[$id]['item']['prijs'];
+
     }
 
     public function verwijderItem($id){

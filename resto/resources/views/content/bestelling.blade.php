@@ -19,7 +19,7 @@
                                 <span class="label label-succes">€{{$product['prijs']}}</span>
                             </div>
                             <div class="col-2" style="padding-right: 0; padding-left: 0;">
-                                <a href="{{route('product.addToBestelCart',['id' => $product['item']['id']])}}" class="btn btn-outline-dark">+</a>
+                                <a href="{{route('vermeerderMetEén',['id' => $product['item']['id']])}}" class="btn btn-outline-dark">+</a>
                             </div>
                             <div class="col-2" style="padding-right: 0; padding-left: 0;">
                                 <a href="{{route('verminderMetEén',['id'=>$product['item']['id']])}}" class="btn btn-outline-dark">-</a>
