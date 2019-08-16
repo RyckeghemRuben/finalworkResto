@@ -13,3 +13,31 @@
 .test{
     font-family: Steelfish;
 }
+.adminheaderImg{
+    width: 100%;
+    background-image: url("/images/menuHead.png");
+    background-size: cover;
+}
+
+.navbar-brand{
+    width: 100%;
+}
+.cart{
+    width: 100%;
+}
+.menuHeader{
+    width: 100%;
+}
+@media (min-width: 768px) {
+
+    .navbar-brand{
+        width: 50%;
+    }
+
+    .cart{
+        width: 50%;
+    }
+    .menuHeader{
+        display: none;
+    }
+}

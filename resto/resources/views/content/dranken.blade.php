@@ -6,13 +6,14 @@
         <div class="col-10"></div>
         <div class="col-2" style="text-align: center">
             <a href="{{route('product.bestelling')}}">
-            <img style="width: 100%;" src="{{ URL::asset("/images/cart.png") }}">
+            <img class="cart" src="{{ URL::asset("/images/cart.png") }}">
                 @if(Session::has('cart'))
             <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
                     @endif
             </a>
         </div>
     </div>
+    @if(Session::has('tafelNummer'))
     <h2 style="font-family: Steelfish;">Frisdranken</h2>
     @foreach($frisdranken as $frisdrank)
         @foreach ($frisdrank->dranks as $soort)
@@ -183,22 +184,23 @@
         @endforeach
     @endforeach
 </div>
+@endif
 <div class="row">
     <nav class="navbar fixed-bottom navbar-light bg-light">
         <div class="col">
-            <a style="width: 100%" class="navbar-brand" href="{{Route('drankIndexKlant')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnDrinksActive.png") }}"></a>
+            <a class="navbar-brand" href="{{Route('drankIndexKlant')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnDrinksActive.png") }}"></a>
         </div>
         <div class="col">
-            <a style="width: 100%" class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnFood.png") }}"></a>
+            <a class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnFood.png") }}"></a>
         </div>
         <div class="col">
-            <a style="width: 100%" class="navbar-brand" href="{{route('klantOproep')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBell.png") }}"></a>
+            <a  class="navbar-brand" href="{{route('klantOproep')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBell.png") }}"></a>
         </div>
         <div class="col">
-            <a style="width: 100%" class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnHistory.png") }}"></a>
+            <a  class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnHistory.png") }}"></a>
         </div>
         <div class="col">
-            <a style="width: 100%" class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnBill.png") }}"></a>
+            <a class="navbar-brand" href="{{route('product.bestelling')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBill.png") }}"></a>
         </div>
     </nav>
 </div>

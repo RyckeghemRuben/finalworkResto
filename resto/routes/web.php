@@ -43,6 +43,8 @@ Route::post('/index',[
     'as' => 'addTostorage'
 ]);
 
+//drankroutes
+
 Route::get('/adminDranken','AdminController@getAdminDranken')->name('admin.adminDranken');
 
 Route::get('/createDrank',[
@@ -76,10 +78,13 @@ Route::get('drankDelete/{id}',[
     'as' => 'drankDelete'
     ]);
 
+//
+
 Route::get('/start',[
     'uses' => 'StartController@getStart',
     'as' => 'contentStart'
 ]);
+
 
 Route::get('/addToCart/{id}',[
     'uses'=>'ProductController@getAddToCart',
@@ -89,6 +94,8 @@ Route::get('/addToBestelCart/{id}',[
     'uses'=>'ProductController@getAddToBestelCart',
     'as'=>'product.addToBestelCart'
 ]);
+
+//routes ivm bestelllingen
 
 Route::get('/bestelling',[
     'uses'=>'ProductController@getBestelling',
@@ -117,6 +124,8 @@ Route::get('bestellingDelete/{id}',[
     'uses' => 'AdminController@getBestellingDelete',
     'as' => 'bestellingDelete'
 ]);
+
+//routes oproepen
 Route::get('/klantOproep',[
     'uses' => 'StartController@getKlantOproep',
     'as' => 'klantOproep'
@@ -125,3 +134,4 @@ Route::get('oproepDelete/{id}',[
     'uses' => 'AdminController@getOproepDelete',
     'as' => 'oproepDelete'
 ]);
+
