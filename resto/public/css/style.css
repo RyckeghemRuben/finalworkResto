@@ -28,6 +28,9 @@
 .menuHeader{
     width: 100%;
 }
+.bannerGroot{
+    display: none;
+}
 @media (min-width: 768px) {
 
     .navbar-brand{
@@ -39,5 +42,9 @@
     }
     .menuHeader{
         display: none;
+    }
+    .bannerGroot{
+        width: 100%;
+        display: inline;
     }
 }

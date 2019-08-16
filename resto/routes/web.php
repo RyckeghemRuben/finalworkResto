@@ -17,7 +17,6 @@ Route::get('/', function (){
 });
 
 
-
 Route::get('/index','StartController@getIndex')->name('content.index');
 
 Route::get('/admin','StartController@getAdmin')->name('admin.index');

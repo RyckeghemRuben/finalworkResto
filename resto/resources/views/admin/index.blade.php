@@ -2,6 +2,17 @@
 @extends('layouts.adminmenu')
 
 @section('content')
+    <div class="row" style="margin-top: 1em;">
+        <div class="col-2">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                <img  width="100%" src="{{URL::asset("/images/logoutSmall.png")}}">
+            </a>
+            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+        </div>
+
+    </div>
     <div class="card" style="margin-top: 1.5em">
         <div class="card-header bg-danger" style="color: white;">
             Bestellingen
