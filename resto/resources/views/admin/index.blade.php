@@ -37,7 +37,7 @@
         </div>
         <div class="card-body">
             <h5 class="card-title bg">Creëer/update/verwijder gerechten</h5>
-            <a href="#" class="btn btn-outline-danger">Volgende</a>
+            <a href="{{route('adminEten')}}" class="btn btn-outline-danger">Volgende</a>
         </div>
     </div>
     <div class="card" style="margin-top: 1.5em">

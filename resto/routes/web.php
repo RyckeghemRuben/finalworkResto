@@ -134,3 +134,20 @@ Route::get('oproepDelete/{id}',[
     'as' => 'oproepDelete'
 ]);
 
+//foodRoutes
+
+Route::get('/eten',[
+    'uses' => 'FoodController@getFoodIndex',
+    'as' => 'adminEten'
+]);
+
+Route::post('/createFood',[
+    'uses' => 'FoodController@postCreateFood',
+    'as' => 'foodCreate'
+]);
+
+Route::get('/createFood',[
+    'uses' => 'AdminController@getFoodCreate',
+    'as' =>'admin.createFood'
+]);
+

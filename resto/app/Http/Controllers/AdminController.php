@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Soort;
 use App\Bestelling;
 use App\Oproep;
+use App\Foodsoort;
 
 
 class AdminController extends Controller
@@ -59,4 +60,10 @@ class AdminController extends Controller
         $oproep->delete();
         return redirect()->action('AdminController@getKlantBestelling');
     }
+
+    function getFoodCreate(){
+        $foodsoorts = Foodsoort::all();
+        return view('admin.createFood',['foodsoorts'=>$foodsoorts]);
+    }
+
 }

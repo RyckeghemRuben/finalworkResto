@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFoodSoortTable extends Migration
+class CreateFoodsoortsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateFoodSoortTable extends Migration
      */
     public function up()
     {
-        Schema::create('food_soort', function (Blueprint $table) {
+        Schema::create('foodsoorts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('food_id');
-            $table->integer('foodsoort_id');
+            $table->string('name');
             $table->timestamps();
-
         });
     }
 
@@ -29,6 +27,6 @@ class CreateFoodSoortTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('food_soort');
+        Schema::dropIfExists('foodsoorts');
     }
 }
