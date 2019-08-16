@@ -29,6 +29,8 @@ Route::get('/dranken',[
     'as'=>'drankIndexKlant'
 ]);
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -77,7 +79,7 @@ Route::get('drankDelete/{id}',[
     'as' => 'drankDelete'
     ]);
 
-//
+
 
 Route::get('/start',[
     'uses' => 'StartController@getStart',
@@ -89,6 +91,12 @@ Route::get('/addToCart/{id}',[
     'uses'=>'ProductController@getAddToCart',
     'as'=>'product.addToCart'
 ]);
+
+Route::get('/addToFoodCart/{id}',[
+    'uses'=>'ProductController@getAddToFoodCart',
+    'as'=>'product.addToFoodCart'
+]);
+
 Route::get('/addToBestelCart/{id}',[
     'uses'=>'ProductController@getAddToBestelCart',
     'as'=>'product.addToBestelCart'
@@ -119,6 +127,7 @@ Route::get('/klantenBestellingen',[
     'uses'=>'AdminController@getKlantBestelling',
     'as'=>'admin.klantBestelling'
 ]);
+
 Route::get('bestellingDelete/{id}',[
     'uses' => 'AdminController@getBestellingDelete',
     'as' => 'bestellingDelete'
@@ -138,7 +147,7 @@ Route::get('oproepDelete/{id}',[
 
 Route::get('/eten',[
     'uses' => 'FoodController@getFoodIndex',
-    'as' => 'adminEten'
+    'as' => 'adminEten',
 ]);
 
 Route::post('/adminCreateFood',[
@@ -164,4 +173,10 @@ Route::post('/foodUpdate',[
 Route::get('foodDelete/{id}',[
     'uses' => 'AdminController@getFoodDelete',
     'as' => 'foodDelete'
+]);
+
+
+Route::get('/klanteten',[
+    'uses'=>'StartController@getFoodIndexKlant',
+    'as'=>'foodIndexKlant'
 ]);

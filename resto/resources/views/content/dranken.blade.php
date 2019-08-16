@@ -213,7 +213,7 @@
             <a class="navbar-brand" href="{{Route('drankIndexKlant')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnDrinksActive.png") }}"></a>
         </div>
         <div class="col">
-            <a class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/btnFood.png") }}"></a>
+            <a class="navbar-brand" href="{{Route('foodIndexKlant')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnFood.png") }}"></a>
         </div>
         <div class="col">
             <a  class="navbar-brand" href="{{route('klantOproep')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBell.png") }}"></a>

@@ -7,6 +7,7 @@ use App\Drank;
 use App\Cart;
 use App\Bestelling;
 use Session;
+use App\Food;
 
 
 class ProductController extends Controller
@@ -20,6 +21,17 @@ class ProductController extends Controller
         $request->session()->put('cart',$cart);
         return redirect()->route('drankIndexKlant');
     }
+
+    public function getAddToFoodCart(Request $request,$id){
+        $food = Food::find($id);
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        $cart->add($food,$food->id);
+
+        $request->session()->put('cart',$cart);
+        return redirect()->route('foodIndexKlant');
+    }
+
 
     public function getAddToBestelCart(Request $request,$id){
         $drank = Drank::find($id);

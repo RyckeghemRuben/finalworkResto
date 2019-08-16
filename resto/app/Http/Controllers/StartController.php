@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Drank;
 use App\Oproep;
+use App\Foodsoort;
 
 class StartController extends Controller
 {
@@ -91,6 +92,11 @@ class StartController extends Controller
         return redirect()->route('content.index')->with('message', 'Er wordt iemand naar jouw tafel gestuurd.');
     }
 
+    public function getFoodIndexKlant(){
+        $snacks = Foodsoort::with('foods')
+            ->where('id','=',1)->get();
+        return view('content.gerechten',['snacks'=>$snacks]);
+    }
 }
 
 
