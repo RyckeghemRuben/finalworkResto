@@ -14,7 +14,11 @@
         </div>
     </div>
     @if(Session::has('tafelNummer'))
-    <h2 style="font-family: Steelfish;">Frisdranken</h2>
+
+        @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',1)->first())
+         <hr>
+        <h2 style="font-family: Steelfish;">Frisdranken</h2>
+        @endif
     @foreach($frisdranken as $frisdrank)
         @foreach ($frisdrank->dranks as $soort)
             <div class="row">
@@ -30,8 +34,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Bieren op vat</h2>
+    @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',2)->first())
+        <hr>
+         <h2 style="font-family: Steelfish;">Bieren op vat</h2>
+    @endif
     @foreach($bierenVat as $bierVat)
         @foreach ($bierVat->dranks as $soort)
             <div class="row">
@@ -47,8 +53,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Bieren op fles</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',3)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Bieren op Fles</h2>
+            @endif
     @foreach($bierenFles as $bierFles)
         @foreach ($bierFles->dranks as $soort)
             <div class="row">
@@ -64,8 +72,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Trappisten</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',4)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Trappisten</h2>
+            @endif
     @foreach($trappisten as $trappist)
         @foreach ($trappist->dranks as $soort)
             <div class="row">
@@ -81,8 +91,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Abdijbieren</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',5)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Abdijbieren</h2>
+            @endif
     @foreach($abdijBieren as $abdijBier)
         @foreach ($abdijBier->dranks as $soort)
             <div class="row">
@@ -98,8 +110,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Fruitbieren</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',6)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Fruitbieren</h2>
+            @endif
     @foreach($fruitBieren as $fruitBier)
         @foreach ($fruitBier->dranks as $soort)
             <div class="row">
@@ -115,8 +129,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Apperitieven</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',7)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Apperitieven</h2>
+            @endif
     @foreach($apperitieven as $apperitief)
         @foreach ($apperitief->dranks as $soort)
             <div class="row">
@@ -132,8 +148,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Wijnen</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',8)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Wijnen</h2>
+            @endif
     @foreach($wijnen as $wijn)
         @foreach ($wijn->dranks as $soort)
             <div class="row">
@@ -149,8 +167,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Sterke Dranken</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',9)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Sterke Dranken</h2>
+            @endif
     @foreach($sterkeDranken as $sterkeDrank)
         @foreach ($sterkeDrank->dranks as $soort)
             <div class="row">
@@ -166,8 +186,10 @@
             </div>
         @endforeach
     @endforeach
-    <hr>
-    <h2 style="font-family: Steelfish;">Warme Dranken</h2>
+            @if(DB::table('drank_soort')->get('soort_id')->where('soort_id',10)->first())
+                <hr>
+                <h2 style="font-family: Steelfish;">Warme Dranken</h2>
+            @endif
     @foreach($warmeDranken as $warmeDrank)
         @foreach ($warmeDrank->dranks as $soort)
             <div class="row">
