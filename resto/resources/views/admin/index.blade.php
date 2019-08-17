@@ -42,11 +42,11 @@
     </div>
     <div class="card" style="margin-top: 1.5em">
         <div class="card-header bg-danger" style="color: white;">
-            Andere
+            Aankondigingen
         </div>
         <div class="card-body">
-            <h5 class="card-title bg">Creëer/update/verwijder andere</h5>
-            <a href="#" class="btn btn-outline-danger">Volgende</a>
+            <h5 class="card-title bg">Creëer/update/verwijder Aankondigingen</h5>
+            <a href="{{route('aankondigingIndex')}}" class="btn btn-outline-danger">Volgende</a>
         </div>
     </div>
 @endsection

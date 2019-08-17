@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Aankondiging;
 use App\Drank;
 use Illuminate\Http\Request;
 use App\Soort;
@@ -84,6 +85,20 @@ class AdminController extends Controller
         $foodje->delete();
 
         return redirect()->action('FoodController@getFoodIndex');
+    }
+
+
+    function getAankondigingCreate(){
+        return view('admin.createAankondiging');
+    }
+
+    function getAankondigingEdit($id){
+        $aankondigingetje = Aankondiging::find($id);
+
+        return view('admin.editAankondiging',[
+            'aankondigingetje' => $aankondigingetje,
+            'aankondigingId'=>$id,
+        ]);
     }
 
 }

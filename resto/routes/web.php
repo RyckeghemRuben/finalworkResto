@@ -184,3 +184,34 @@ Route::get('/klanteten',[
     'uses'=>'StartController@getFoodIndexKlant',
     'as'=>'foodIndexKlant'
 ]);
+
+//aankondiging routes
+
+Route::get('/aankondigingen',[
+    'uses' => 'AankondigingController@getAankondigingIndex',
+    'as' => 'aankondigingIndex'
+]);
+
+Route::get('/createAankondiging',[
+    'uses' => 'AdminController@getAankondigingCreate',
+    'as' =>'admin.createAankondiging'
+]);
+
+Route::post('/adminCreateAankondiging',[
+    'uses' => 'AankondigingController@postCreateAankondiging',
+    'as' => 'aankondigingCreate'
+]);
+Route::get('/klantaankondigingen',[
+    'uses'=>'StartController@getAankondigingIndexKlant',
+    'as'=>'AankondigingIndexKlant'
+]);
+
+Route::get('aankondigingEdit/{id}',[
+    'uses' => 'AdminController@getAankondigingEdit',
+    'as' => 'editAankondigingPagina'
+]);
+
+Route::post('/aankondigingUpdate',[
+    'uses' => 'AankondigingController@postUpdateAankondiging',
+    'as' => 'aankondigingUpdate'
+]);
