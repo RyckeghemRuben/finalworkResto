@@ -3,8 +3,15 @@
 @section('content')
     <div class="container" style="margin-bottom: 5em">
         @if(Session::has('tafelNummer'))
+        @foreach($aankondigingen as $aankondiging)
 
-
+                <div class="card" style="margin-top: 1em;">
+                    <h5 class="card-header bg-danger" style="color:white; font-family: Steelfish;">{{$aankondiging->naam}}</h5>
+                    <div class="card-body">
+                        <p class="card-text">{{$aankondiging->tekst}}</p>
+                    </div>
+                </div>
+            @endforeach
     @endif
     </div>
     <div class="row">
@@ -19,7 +26,7 @@
                 <a  class="navbar-brand" href="{{route('klantOproep')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBell.png") }}"></a>
             </div>
             <div class="col">
-                <a  class="navbar-brand" href="#"><img style="width: 100%;" src="{{ URL::asset("/images/announcementSmallActive.png") }}"></a>
+                <a  class="navbar-brand" href="{{Route('AankondigingIndexKlant')}}"><img style="width: 100%;" src="{{ URL::asset("/images/announcementSmallActive.png") }}"></a>
             </div>
             <div class="col">
                 <a class="navbar-brand" href="{{route('product.bestelling')}}"><img style="width: 100%;" src="{{ URL::asset("/images/btnBill.png") }}"></a>

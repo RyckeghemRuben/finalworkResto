@@ -10,6 +10,7 @@ use Session;
 use App\Drank;
 use App\Oproep;
 use App\Foodsoort;
+use App\Aankondiging;
 
 class StartController extends Controller
 {
@@ -110,6 +111,14 @@ class StartController extends Controller
         return view('content.gerechten',['snacks'=>$snacks,'versnaperingen'=>$versnaperingen,
             'voorgerechten'=>$voorgerechten,'hoofdgerechten'=>$hoofdgerechten,'desserts'=>$desserts,
             'wafelspannenkoeken'=>$wafelspannenkoeken]);
+    }
+
+    public function getAankondigingIndexKlant(){
+
+        $aankondigingen = Aankondiging::orderBy('created_at','desc')->get();
+
+        return view('content.aankondigingen',['aankondigingen'=>$aankondigingen]);
+
     }
 }
 

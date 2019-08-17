@@ -23,7 +23,9 @@
     </div>
     <div class="row" style="margin-top: 0.3em">
         <div class="col-4" style="padding: 0 0 0 2em;">
+            <a href="{{Route('AankondigingIndexKlant')}}">
             <img style="width: 100%;" src="{{ URL::asset("/images/announcement.png") }}">
+            </a>
         </div>
         <div class="col-4">
             <a href="{{route('product.bestelling')}}">
