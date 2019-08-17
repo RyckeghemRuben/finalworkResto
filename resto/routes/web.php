@@ -215,3 +215,8 @@ Route::post('/aankondigingUpdate',[
     'uses' => 'AankondigingController@postUpdateAankondiging',
     'as' => 'aankondigingUpdate'
 ]);
+
+Route::get('aankondigingDelete/{id}',[
+    'uses' => 'AdminController@getAankondigingDelete',
+    'as' => 'aankondigingDelete'
+]);

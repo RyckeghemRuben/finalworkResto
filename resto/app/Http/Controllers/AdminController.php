@@ -101,4 +101,10 @@ class AdminController extends Controller
         ]);
     }
 
+    public function getAankondigingDelete($id){
+        $aankondiging = Aankondiging::find($id);
+        $aankondiging->delete();
+        return redirect()->action('AankondigingController@getAankondigingIndex');
+    }
+
 }
