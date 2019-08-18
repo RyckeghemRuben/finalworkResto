@@ -11,6 +11,7 @@ use App\Bestelling;
 use App\Oproep;
 use App\Food;
 use App\Foodsoort;
+use Illuminate\Support\Facades\Session;
 
 
 class AdminController extends Controller
@@ -44,6 +45,7 @@ class AdminController extends Controller
     public function getKlantBestelling(){
         $bestellingen = Bestelling::all();
         $oproepen = Oproep::all();
+        Session::put('bestelling',$bestellingen);
         $bestellingen->transform(function ($bestelling){
             $bestelling->cart = unserialize($bestelling->cart);
             return $bestelling;
@@ -52,6 +54,7 @@ class AdminController extends Controller
     }
 
     public function getBestellingDelete($id){
+
         $bestelling = Bestelling::find($id);
         $bestelling->delete();
         return redirect()->action('AdminController@getKlantBestelling');

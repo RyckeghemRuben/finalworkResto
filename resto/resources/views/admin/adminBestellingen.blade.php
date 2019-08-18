@@ -3,7 +3,7 @@
     <script type="text/javascript">
         setTimeout(function(){
             location.reload();
-        },5000);
+        },10000);
     </script>
  <div class="container" style="margin-top: 1em; ">
      @foreach($oproepen as $oproep)
@@ -27,8 +27,11 @@
              <div class="card" style="margin-top: 1em;">
                  <div class="card-body">
                      <div class="row">
-                         <div class="col-9">
+                         <div class="col-6">
                          <h2 class="card-title" style="font-family: Steelfish">Tafelnummer: {{$bestelling->tafelnummer}}</h2>
+                         </div>
+                         <div class="col-3">
+                             <a href="{{route('printBestelling',['id'=>$bestelling->id])}}" class="btn btn-outline-danger">Print</a>
                          </div>
                          <div class="col-3">
                              <a href="{{route('bestellingDelete',['id'=>$bestelling->id])}}" class="btn btn-outline-danger">X</a>
@@ -38,7 +41,6 @@
                      @foreach($bestelling->cart->items as $item)
                             <p>
                                 <b>{{$item['item']['naam']}}</b> | X <b>{{$item['qty']}}</b>
-
                                   | € {{$item['prijs']}}
                             </p>
                          @endforeach

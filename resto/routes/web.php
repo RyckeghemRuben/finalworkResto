@@ -220,3 +220,9 @@ Route::get('aankondigingDelete/{id}',[
     'uses' => 'AdminController@getAankondigingDelete',
     'as' => 'aankondigingDelete'
 ]);
+
+Route::get('printen/{id}',[
+    'uses' => 'PrintController@GetPrinten',
+    'as' => 'printBestelling'
+]);
+

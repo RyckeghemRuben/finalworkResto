@@ -2,6 +2,7 @@
 
 namespace App;
 use Illuminate\Database\Eloquent\Model;
+use Dompdf\Dompdf;
 
 class Cart
 {
@@ -58,6 +59,7 @@ class Cart
         unset($this->items[$id]);
 
     }
+
 }
 
 
