@@ -27,6 +27,7 @@ class ProductController extends Controller
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->add($food,$food->id);
+
         $request->session()->put('cart',$cart);
         return redirect()->route('foodIndexKlant');
     }

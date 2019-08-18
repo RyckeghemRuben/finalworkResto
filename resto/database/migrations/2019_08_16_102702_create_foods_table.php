@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateFoodsTable extends Migration
 {
@@ -19,6 +20,7 @@ class CreateFoodsTable extends Migration
             $table->integer('prijs');
             $table->timestamps();
         });
+        DB::update("ALTER TABLE foods AUTO_INCREMENT = 1000;");
     }
 
     /**

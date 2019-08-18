@@ -12,7 +12,6 @@
             </div>
             <div class="col-lg-12">
                     @foreach($products as $product)
-                        {{dd($products)}}
                         <div class="row" style="margin-top: 1em">
                             <div class="col-6" style="padding-top: 0.5em">
                                 <span class="badge-danger" style="padding: 0.2em; border-radius: 10px;">{{$product['qty']}}</span>
